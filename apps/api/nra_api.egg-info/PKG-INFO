@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: nra-api
+Version: 0.1.0
+Summary: Nat's Running App – FastAPI backend
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn[standard]>=0.23
+Requires-Dist: pydantic>=2.6
+Requires-Dist: sqlalchemy>=2.0
+Requires-Dist: psycopg[binary]>=3.1
+Requires-Dist: alembic>=1.12
+Requires-Dist: python-jose[cryptography]>=3.3
+Requires-Dist: passlib[argon2]>=1.7
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: redis>=5.0
+Requires-Dist: rq>=1.15
+Requires-Dist: email-validator>=2.1
+Requires-Dist: ruff>=0.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Requires-Dist: mypy>=1.8; extra == "dev"
+Requires-Dist: types-python-jose; extra == "dev"
+Requires-Dist: types-redis; extra == "dev"
+
+# nra-api (FastAPI)
+
+Run locally:
+
+```
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e .[dev]
+uvicorn app.main:app --reload
+```
+
+Env vars: see root `README.md`.
+
